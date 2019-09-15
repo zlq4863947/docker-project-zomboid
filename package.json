@@ -1,0 +1,24 @@
+{
+  "name": "docker-project-zomboid",
+  "version": "1.0.0",
+  "description": "僵尸毁灭工程跨平台docker版",
+  "scripts": {
+    "build": "docker build -t zlq4863947/project_zomboid .",
+    "create": "docker run -p 6080:80 -e HTTP_PASSWORD=123 -d --name project_zomboid zlq4863947/project_zomboid",
+    "remove": "docker rm -f project_zomboid",
+    "start": "docker start project_zomboid",
+    "stop": "docker stop project_zomboid",
+    "pause": "docker pause project_zomboid",
+    "unpause": "docker unpause project_zomboid"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zlq4863947/docker-project-zomboid.git"
+  },
+  "author": "zlq4863947@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zlq4863947/docker-project-zomboid/issues"
+  },
+  "homepage": "https://github.com/zlq4863947/docker-project-zomboid#readme"
+}
